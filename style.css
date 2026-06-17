@@ -1,30 +1,21 @@
-/* Шаблон стилей для сайта Deftones (по методичке Глава 2) */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #111111;
     color: #ffffff;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-image: url('images/deftones.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
-h1, h2, em {
-    color: #ffffff;
-    text-align: center;
-}
-
-p {
-    text-align: justify;
-    margin: 15px 30px;
-}
-
-/* Меню навигации */
 nav {
     background-color: #1a1a1a;
     padding: 15px 0;
     text-align: center;
-    border-bottom: 3px solid #c00; /* красная полоса в стиле Deftones */
+    border-bottom: 3px solid #c00;
 }
 
 nav a {
@@ -32,7 +23,6 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -40,45 +30,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Текущая страница в меню — просто текст */
-nav span {
-    color: #ffffff;
-    font-weight: bold;
-    margin: 0 15px;
-}
-
-/* Таблицы */
-table {
-    border-collapse: collapse;
-    margin: 20px auto;
-    width: 90%;
-}
-
-td, th {
-    border: 1px solid #ffffff;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Фото на главной */
-img {
-    display: block;
-    margin: 20px auto;
-    max-width: 50%;
-    border: 3px solid #c00;
-}
-
-/* Авторские права */
-footer p {
-    text-align: center;
-    font-size: 0.9em;
-    color: #aaaaaa;
-}
-
-/* Дополнительно для главной страницы */
-.center {
-    text-align: center;
-}/* Выпадающее меню (Задание 1.1) */
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -87,25 +39,19 @@ footer p {
 .dropbtn {
     background-color: #c00;
     color: white;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
-}
-
-.dropbtn:hover {
-    background-color: #ff0000;
+    font-size: 16px;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #1a1a1a;
-    min-width: 220px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
     z-index: 1;
-    border-radius: 4px;
 }
 
 .dropdown-content a {
@@ -117,98 +63,79 @@ footer p {
 
 .dropdown-content a:hover {
     background-color: #333;
-    color: #ff0000;
+    color: white;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}/* Фон для всех страниц */
-body {
-    background-color: #111111;
-    background-image: url('deftones.jpg'); /* только на главной */
-    background-size: cover;
-    background-position: center;
 }
 
-/* Чтобы на других страницах фон был просто тёмным */
-body:not([background]) {
-    background-image: none;
-}
-
-/* Блок "Сейчас в ротации" */
-.rotation-block {
-    margin: 20px 30px;
-    padding: 20px;
-    background-color: rgba(0,0,0,0.75);
-    border: 2px solid #c00;
-    border-radius: 8px;
-    text-align: center;
-}/* Панель значков (Задание 2) */
-.icon-panel {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 40px 0;
-    flex-wrap: wrap;
-}
-
-.icon-panel a {
+/* Остальные стили */
+h1, h2 {
     text-align: center;
     color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
 }
 
-.icon-panel img {
-    width: 60px;
-    height: 60px;
+p {
+    text-align: justify;
+    margin: 15px 30px;
+    line-height: 1.6;
+}
+
+hr {
+    border: 1px solid #c00;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.quick-nav {
+    text-align: center;
+    padding: 15px;
+    background: #1a1a1a;
+    margin: 20px 30px;
     border: 2px solid #c00;
-    border-radius: 50%;
-    padding: 8px;
-    transition: 0.3s;
 }
 
-.icon-panel img:hover {
-    transform: scale(1.15);
-    border-color: #ff0000;
-}/* Красивые кнопки иконок */
+.quick-nav a {
+    margin: 0 12px;
+    color: #1E90FF;
+    font-weight: bold;
+}
+
 .icon-panel {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin: 30px 0;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
 }
 
 .icon-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
+    text-align: center;
+    color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: all 0.3s;
-}
-
-.icon-btn i {
-    font-size: 48px;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1a1a1a;
-    border: 3px solid #c00;
-    border-radius: 50%;
-    margin-bottom: 8px;
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    width: 120px;
 }
 
 .icon-btn:hover {
-    transform: translateY(-5px);
-    color: #ff0000;
+    background: #c00;
+    transform: scale(1.05);
 }
 
-.icon-btn:hover i {
-    border-color: #ff0000;
-    background-color: #222;
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #1a1a1a;
+}
+
+/* Для мобильных */
+@media (max-width: 768px) {
+    .icon-panel {
+        flex-direction: column;
+        align-items: center;
+    }
 }
