@@ -139,3 +139,31 @@ footer {
         align-items: center;
     }
 }
+/* Стили для участников и галереи */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.member {
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #c00;
+}
+
+.member img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+.member p {
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
